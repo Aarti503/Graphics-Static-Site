@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+	<html  lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Graphics Site</title>
+		<link type="text/css" rel="stylesheet" href="css/stylee.css">
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+	</head>
+	<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+		
+	#header{
+	height: 100vh;
+	background-image: url(images/background.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.container{
+	margin-right: 100px;
+	margin-left: 100px;
+}
+.logo{
+	margin-top: 30px; 
+	width: 100px;
+}
+.header_text{
+	max-width: 350px;
+	margin-top: 140px;
+}
+h1{
+	font-size: 34px;
+}
+.square{
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	background: #f67c92; 
+}	
+.common_btn{
+	padding: 18px 40px;
+	background: transparent;
+	outline: none;
+	border: 2px solid #f67c92;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+p{
+	font-size: 15px;
+	line-height: 18px;
+	color: #666;
+}
+.header_text button{
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+.line_1{
+	width: 15px;
+	height: 15px;
+	background: #f67c92;
+	display: inline-block;
+}
+.line_2{
+	width: 80px;
+	height: 2px;
+	background: #f67c92;
+	display: inline-block;
+}
+.line_3{
+	width: 60px;
+	height: 2px;
+	background: #f67c92;
+	display: inline-block;
+}
+.line{
+	line-height: 8px;
+}
+#sidenav{
+	width: 250px;
+	height: 100vh;
+	position: fixed;
+	right: -250px;
+	top: 0;
+	background: #f67c92;
+	z-index: 2;
+	transition: .5s;
+}
+nav ul li{
+	list-style: none;
+	margin: 50px 20px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: white;
+}
+#menubtn{
+	width: 50px;
+	position: fixed;
+	right: 65px;
+	top: 35px;
+	z-index: 2;
+	cursor: pointer;
+}
+/*--------------------about---------------*/
+#about ,#offer{
+	padding: 100px 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.about_left_col{
+	flex-basis: 50%;
+}
+.about_left_col img{
+	width: 100%;
+}
+.about_right_col{
+	flex-basis: 50%;
+	text-align: right;
+}
+.about_text{
+	max-width: 600px;
+	margin-right: 100px;
+	display: inline-block;
+}
+.about_text h2{
+	margin: 50px 0 10px;
+	font-size: 28px;
+	font-style: italic;  
+}
+.about_text h3{
+	color: #666;
+	font-size: 20px;
+	font-style: italic;  
+}
+/*-------------------------------------features---------------------------------*/
+#features{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.features_row{
+	width: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around; 
+	flex-wrap: wrap;
+}
+.features_col{
+	flex-basis: 25%;
+	text-align: center;
+}
+.features_btn{
+	margin: 80px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.features_btn .line{
+	text-align: right;
+	display: inline-block;
+	margin-right: 25px;
+}
+/*-----------------------------Courses---*/
+#courses{
+	padding: 100px 0;
+}
+.courses_row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.courses_right_col{
+	flex-basis: 50%;
+}
+.courses_right_col img{
+	width: 100%;
+
+}
+.courses_left_col{
+	flex-basis: 50%;
+}
+.courses_text{
+	max-width: 400px;
+}
+.courses_text button{
+	margin: 30px 0; 
+}
+
+/*----------------------------offer------------*/
+#offer button{
+	margin: 30px 0;
+}
+
+/*----------------------------------Contact----------------------------*/
+.contact_row{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.contact_left_col, .contact_right_col{
+	flex-basis: 50%;
+}
+.contact_right_col img{
+	width: 100%;
+}
+
+/*-----------------------------------------------Contact------form------------*/
+form{
+	max-width: 350px;
+	margin: 30px 0;
+
+}
+form input{
+	width: 100%;
+	padding: 12px 10px;
+	margin-bottom: 5px;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	border: 3px solid #fab3c4;
+	border-radius: 25px;
+}
+
+.btn_box{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.btn_box button{
+	flex-basis: 48%;
+	padding: 18px 0;
+	border-radius: 25px;
+
+}
+
+/*---------------------footer-----------------------------------*/
+#footer{
+	padding: 50px 0 30px;
+
+}
+hr{
+	width: 100%;
+	border: 0;
+	border-top: 3px solid #f67c92;
+}
+.footer_row{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.footer_left_col{
+	flex-basis: 50%;
+	margin-top: 60px;
+}
+.footer_right_col{
+	flex-basis: 35%;
+}
+.footer_links{
+	display: flex;
+	font-weight: bold;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.link_title h4{
+	color: #f67c92;
+	margin-bottom: 20px;
+}
+.link_title small{
+	font-size: 13px;
+	color: #555;
+	font-weight: bold;
+}
+.footer_info{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.footer_logo img{
+	width: 100px;
+
+}
+.footer_logo button{
+	padding: 12px 38px;
+	margin-top: 20px;
+	font-size: 10px;
+}
+.footer_logo , .copyright_text{
+	flex-basis: 40%;
+	font-weight: bold;
+}
+/*----------------------------Social Icons-------------------------------*/
+.social_icons{
+	width: 50px;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.social_icons img{
+	display: block;
+	width: 20px;
+	margin: 0 auto 20px;
+	cursor: pointer;
+}
+
+/*-------------------MEDIA QUERIES------------------------*/
+@media only screen and (max-width: 770px){
+	#header{
+		background-image: none;
+	}
+
+	.container{
+	margin-right: 50px;
+	margin-left: 50px;
+	}
+	.logo{
+	margin-top: 27px; 
+	width: 70px;
+	}
+	.header_text{
+	
+	margin-top: 100px;
+	}
+	h1{
+	font-size: 25px;
+	}
+
+	#menubtn{
+	width: 40px;
+	right: 50px;
+	}
+	.common_btn{
+	padding: 10px 16px;
+	
+	}
+
+	.social_icons img{
+	
+	width: 14px;
+	margin: 15px auto;
+	}
+	.about_left_col , .about_right_col{
+	flex-basis: 100%;
+	}
+	.about_text{
+	margin: 50px 50px 0;
+	display: inline-block;
+	}
+	.about_text h2{
+	font-size: 18px;
+	
+	}
+	.features_col{
+		flex-basis: 100%;
+		margin-bottom: 20px;
+	}
+	.courses_left_col{
+		flex-basis: 100%;
+	}
+	.courses_right_col{
+		flex-basis: 100%;
+		margin-top: 70px;
+	}
+	.contact_left_col, .contact_right_col{
+	flex-basis: 100%;
+	}
+	.contact_right_col{
+	flex-basis: 100%;
+	margin-top: 50px;
+	}
+	.footer_left_col, .footer_right_col{
+	flex-basis: 100%;
+	margin-top: 60px;
+	}
+	.link_title{
+	flex-basis: 50%;
+	margin-bottom: 30px;
+	}
+}
+</style>
+
+<!--sdbdfksbfsbjfb-->
+	<body>
+		<section id="header">
+			<div class="container">
+				<img src="images/logo.png" class="logo">
+				<div class="header_text">
+					<h1>The purpose is to<br> teach, bring learning to people..</h1>
+					<span class="square"></span>
+					<p>We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.</p>
+					<button class="common_btn">Read More</button>
+					<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<nav id="sidenav">
+			<ul>
+				<li><a href="#header">HOME</a></li>
+				<li><a href="#about">ABOUT US</a></li>
+				<li><a href="#features">FEATURES</a></li>
+				<li><a href="#courses">COURSES</a></li>
+				<li><a href="#offer">OFFER</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+
+			</ul>
+		</nav>
+		<img src="images/menu.png" id="menubtn">
+<!--ABOUT SECTION code--------------------------------------------------------------------------------------------->
+	
+	<section id="about">
+		<div class="about_left_col">
+			<img src="images/about.png">			
+		</div>
+		<div class="about_right_col">
+				<div class="about_text">
+					<h1>About Us</h1>
+					<span class="square"></span>
+					<p>We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.</p><br>
+						<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+					<h2>"We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students."</h2>
+					<h3>----Aarti Yadav----</h3>
+				</div>
+		</div>
+
+	</section>
+<!-----------------------------Features------------------------------------------------------------------------->
+<section id="features">
+	<div class="features_row">
+		<div class="features_col">
+			<img src="images/pic-1.png">
+			<h4>Learn Anywhere</h4>
+			<p>Switch between your computer or tablet or mobile...</p>
+		</div>
+		<div class="features_col">
+			<img src="images/pic-2.png">
+			<h4>Expert Teachers</h4>
+			<p>Learn from industry experts.....</p>
+		</div>
+		<div class="features_col">
+			<img src="images/pic-3.png">
+			<h4>Unlimited Access</h4>
+			<p>Switch between your computer or tablet or mobile</p>
+		</div>
+</div>
+<div class="features_btn">
+					<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+	<button class="common_btn">Free Trial</button>
+	</div>
+<section>
+
+<!--------------------------------Courses--------------------------------->
+<section id="courses">
+	<div class="container courses_row">
+		<div class="courses_left_col">
+			<div class="courses_text">
+				<h1>Browse Our Top<br> Courses</h1>
+				<span class="square"></span>
+				<p>We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.</p>
+					<button class="common_btn">View All Courses</button>
+					<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+			</div>
+		</div>
+		<div class="courses_right_col">
+			<img src="images/course.png">
+		</div>
+	</div>
+	
+</section>
+<!--------------------------------offers----------------------------------->
+<section id="offer">
+		<div class="about_left_col">
+			<img src="images/offer.png">			
+		</div>
+		<div class="about_right_col">
+				<div class="about_text">
+					<h1>Limitless learning <br> limitless possibilities</h1>
+					<span class="square"></span>
+					<p>We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.
+					We are here to provide the best teaching courses for the students.We are here to provide the best teaching courses for the students.</p>
+					<button class="common_btn">Find Offers</button>
+						<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+					
+				</div>
+		</div>
+
+	</section>
+
+<!--------------------------------Contact Us------------------->
+<section id="contact">
+	<div class="container contact_row">
+		<div class="contact_left_col">
+			<h1>Sign Up to Join our <br> community</h1>
+			<form>
+				<input type="text" name="name" placeholder="Enter Your Name">
+				<input type="email" name="email" placeholder="Enter Your email">
+				<input type="password" name="password" placeholder="Enter Your password">
+				<div class="btn_box">
+					<button class="common_btn">Sign Up </button>
+					<button class="common_btn">Log In</button>
+				</div>
+			</form>
+			<div class="line">
+						<span class="line_1"></span><br>
+						<span class="line_2"></span><br>
+						<span class="line_3"></span>
+					</div>
+		</div>
+		<div class="contact_right_col">
+			<img src="images/contact.png">
+		</div>
+	</div>
+
+</section>
+<!-----------------------------footer------------------------------->
+<section id="footer">
+	<div class="container footer_row">
+		<hr>
+		<div class="footer_left_col">
+			<div class="footer_links">
+				<div class="link_title">
+					<h4>Product</h4>
+					<small>Our Plan</small><br>
+					<small>Free Trials</small>
+				</div>
+				<div class="link_title">
+					<h4>About Us</h4>
+					<small>Request Demo</small><br>
+					<small>FAQ's</small>
+				</div>
+				<div class="link_title">
+					<h4>Support</h4>
+					<small>Features</small><br>
+					<small>Contact Us</small>
+				</div>
+				<div class="link_title">
+					<h4>Explore</h4>
+					<small>Find a non-profit</small><br>
+					<small>Corporate Solution</small>
+				</div>
+			</div>
+		</div>
+		<div class="footer_right_col">
+			<div class="footer_info">
+				<div class="copyright_text">
+					<small>support @aarti.com</small>
+					<small>copyright 2020 @aarti</small>
+			</div>
+				<div class="footer_logo">
+					<img src="images/logo.png">
+					<button class="common_btn">English</button>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-----------------------Social Icons----------------------------------------->
+<div class="social_icons">
+	<img src="images/facebook.png">
+	<img src="images/instagram.png">
+	<img src="images/twitter.png">
+	<img src="images/linkedin.png">
+</div>
+
+<!--JS code--------------------------------------------------------------------------------------------->
+
+	<script type="text/javascript">
+		var menubtn = document.getElementById("menubtn");
+		var sidenav = document.getElementById("sidenav");
+		sidenav.style.right = "-250px";
+		menubtn.onclick = function(){
+			if(sidenav.style.right == "-250px"){
+				sidenav.style.right = "0";
+			}
+			else{
+				sidenav.style.right = "-250px";
+			}
+		}
+
+		var scroll = new SmoothScroll('a[href*="#"]',{
+			speed: 1000,
+			speedAsDuration: true
+		});
+	</script>
+
+	</body>
+	</html>
